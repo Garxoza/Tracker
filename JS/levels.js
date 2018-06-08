@@ -61,6 +61,25 @@ function loadLevel(speed, size, amount){
 
     }, 1000/60);
   };
+
+
+  canvas.addEventListener('mousemove', function(evt){
+    console.log(player);
+    console.log("ball position", player.x, player.y, player.radius);
+    var rect = canvas.getBoundingClientRect();
+    console.log(evt.clientX, evt.clientY)
+    if (evt.clientX-60 >player.x-player.radius && evt.clientX-60 <player.x+player.radius && evt.clientY-80 >player.y-player.radius && evt.clientY-80 <player.y+player.radius )
+    { console.log("whatever");
+    alert("you catched the ball");
+    }console.log("wrong");
+  });
+
+
+
+
+
+
+
 }
 function checkClick(){
   // function checkMousePos() {
@@ -75,14 +94,13 @@ function checkClick(){
  
   
 
-canvas.addEventListener('mousemove', function(evt){
-  var rect = canvas.getBoundingClientRect();
-  console.log(evt.clientX, evt.clientY)
+
 
   if(player.x !=evt.clientX) {
     var score=100;
   
   ctx.fillText(100);
   }
-});
+  
 }
+ 
