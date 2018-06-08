@@ -1,0 +1,15 @@
+.header{
+  color: #F46036;
+  text-align: center;
+}
+
+.timer{
+  float: right;
+}
+
+canvas {
+  border: 1px solid black;
+  background-color: #F9C80E;
+  margin: auto;
+  display: block;
+}
